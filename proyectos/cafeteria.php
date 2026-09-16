@@ -1,4 +1,6 @@
 <?php
+session_start ();
+
 
 $CATEGORIAS=[
     "BEBIDAS",
@@ -48,6 +50,11 @@ $ALIMENTOS=[
     "precio"=>10.00],
 
 ];
+if ($_SERVER["REQUEST_METHOD"]){
+
+}
+
+$categotiaSeleccionada=$GET["categoria"] ?? "TODOS";
 
 $error=[];
 
@@ -59,9 +66,20 @@ $error=[];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CAFETERIA UES</title>
+    <link href="" stylesheet="style.css">
 </head>
 <body>
+    <form action="" method="post">
+        <label>Nombre:</label>
+        <input type="text">
+        <label>Categoria</label>
+        <input type="text">
+
+        <label></label>
+        <button type="submit">ENVIAR</button>
+
+    </form>
     
 </body>
 </html>
